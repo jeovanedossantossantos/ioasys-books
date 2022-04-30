@@ -35,6 +35,7 @@ export const LogoIoasys = styled.div`
     padding: 10px;
     h3{
         margin-left: 16.6px;
+        font-family: 'Heebo';
     }
 `
 export const Input = styled.div`

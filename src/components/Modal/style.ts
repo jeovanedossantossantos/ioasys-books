@@ -39,6 +39,7 @@ export const CloseButton = styled.div`
     display:flex;
   
     justify-content: flex-end;
+    cursor: pointer;
   
    
 
@@ -65,6 +66,25 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
+
+   
+
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+    background: #ccc ;
+    }
+
+    ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    }
     @media (max-width: 769px){
         justify-content: center;
         margin-top:-20px;
@@ -177,6 +197,22 @@ export const InformationBooks = styled.div`
     margin: 10px;
     height: 250px;
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+    background: #ccc ;
+    }
+
+    ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    }
     
     
    }

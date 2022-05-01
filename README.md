@@ -63,7 +63,7 @@ Você deverá construir um projeto utilizando o layout proposto
 <img src="./imgREADME/3.png"/>
 <img src="./imgREADME/4.png"/>
 
-<h2>Tela para celular</h3>
+<h2>Telas para celular</h3>
 <img src="./imgREADME/5.png"/>
 
 # Documentação de componentes
@@ -82,7 +82,6 @@ Você deverá construir um projeto utilizando o layout proposto
         <li>pageCount: quantidade de páginas do livro</li>
         <li>published: data da publicação do livro</li>
         <li>publisher: editora do livro</li>
-        <li> </li>
     </ol>
 </li>
 </li>

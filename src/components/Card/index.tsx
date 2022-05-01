@@ -3,13 +3,7 @@ import { Container, Text } from "./style";
 
 interface DataBooksProps {
     authors: Array<string>,
-    category: string,
-    description: string,
-    id: string,
     imageUrl: string,
-    isbn10: string,
-    isbn13: string,
-    language: string,
     pageCount: number,
     published: number,
     publisher: string,
@@ -17,13 +11,7 @@ interface DataBooksProps {
 }
 const Card = ({
     authors,
-    category,
-    description,
-    id,
     imageUrl,
-    isbn10,
-    isbn13,
-    language,
     pageCount,
     published,
     publisher,

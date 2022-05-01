@@ -99,3 +99,43 @@ export const Input = styled.div`
      
     }
 `
+interface AlertToosProps{
+    props:boolean;
+}
+export const AlertToos = styled.div<AlertToosProps>`
+
+    display: ${(props: AlertToosProps) =>
+    props.props === false ? 'none' : "block"};
+    background:#d48faa;
+    position: absolute;
+    width: 239px;
+    height: 48px;
+    margin: 10px;
+    top: 500px;
+
+    
+    backdrop-filter: blur(2px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 4px;
+
+    div{
+        margin-top:-7px;
+        margin-left:30px;
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #d48faa;
+    }
+    p{
+        display: flex;
+        height: 48px;
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        
+        /* background-color: #FFFFFF; */
+    }
+`

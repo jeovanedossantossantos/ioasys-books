@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/img/Logo.png"
 import { AuthContext } from "../../hooks/auth";
 import { api } from "../../service/api";
-import { Container, Input, LogoIoasys } from "./style";
+import { AlertToos, Container, Input, LogoIoasys } from "./style";
 
 interface UserSiginIn {
     email: string;
@@ -33,6 +33,7 @@ export const FormSigin: React.FC = () => {
     const [dataAuth, setDataAuth] = useState<AuthUserSigin>({} as AuthUserSigin)
     const [dataToken, setDataToken] = useState<RefreshToken>({} as RefreshToken)
     const {sigin,setSigin} = useContext(AuthContext)
+    const [alertSigin,setAlertSigin] = useState(false)
     const push = useNavigate()
     const hadleSumbmit = async (event: any) => {
         event.preventDefault();
@@ -48,7 +49,7 @@ export const FormSigin: React.FC = () => {
            
 
         } catch (e) {
-            console.log(e)
+            setAlertSigin(true)
         }
     }
     useEffect(() => {
@@ -62,7 +63,7 @@ export const FormSigin: React.FC = () => {
         if(sigin)push("/home")
         // console.log(dataAuth.refreshToken)
         
-    }, [dataUser,dataAuth]);
+    }, [dataUser,dataAuth,dataToken]);
 
    
     return (
@@ -86,6 +87,10 @@ export const FormSigin: React.FC = () => {
                         <button onClick={(e) => hadleSumbmit(e)}>Entrar</button>
                     </div>
                 </Input >
+                <AlertToos props={alertSigin}>
+                    <div></div>
+                    <p><span>Email e/ou senha incorretos.</span></p>
+                </AlertToos>
             </form>
         </Container>
     )

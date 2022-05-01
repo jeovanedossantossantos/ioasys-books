@@ -7,10 +7,8 @@ export const Container = styled.div`
     
 `
 export const Background = styled.div`
-position: absolute;
+    position: absolute;
     background-image: url(${BgHome});
-    
-    background-blend-mode: darken;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -18,9 +16,9 @@ position: absolute;
     align-items: center;
     transform: matrix(1, 0, 0, -1, 0, 0);
     
-    
     background-position: fixed;
     overflow: hidden;
+   
 `
 export const ContainerCard = styled.div`
     margin: 20px;
@@ -37,11 +35,10 @@ export const CurrentPage = styled.div`
     background-size: cover;
     background-position: fixed;
     
-    /* margin: 10px; */
     padding: 10px;
     width:100%;
     height:50px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     
     display:flex;
@@ -65,6 +62,9 @@ export const CurrentPage = styled.div`
     button:hover{
         transition: 0.5s;
         background: #ccc;
+    }
+    @media (max-width: 460px) {
+        justify-content: center;
     }
    
     

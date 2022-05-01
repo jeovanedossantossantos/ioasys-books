@@ -1,7 +1,8 @@
 
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { BrowserRouter, Routes as RoutesWrapper, Route, Navigate, useNavigate, } from 'react-router-dom'
 import { AuthContext } from '../hooks/auth';
+import { api } from '../service/api';
 import { Home } from '../views/Home';
 import { Sigin } from '../views/Sigin'
 
@@ -10,7 +11,7 @@ import { Sigin } from '../views/Sigin'
 
 function Rotas() {
     const {sigin,setSigin} = useContext(AuthContext)
-
+   
     return (
         <>
             {!sigin ?

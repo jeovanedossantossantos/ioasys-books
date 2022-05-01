@@ -1,4 +1,7 @@
-import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
+import { api } from '../service/api';
+
+
 
 type PropsSigin = {
     sigin: boolean;
@@ -17,9 +20,10 @@ const DEFAULT_VALUE = {
 
 export const AuthContext = createContext<PropsSigin>(DEFAULT_VALUE);
 
-const ContextProvider = ({children}: any) => {
+const ContextProvider =  ({children}: any) => {
     const [sigin, setSigin] = useState(DEFAULT_VALUE.sigin)
-
+    
+    
     return(
         <AuthContext.Provider value={{sigin, setSigin}}>
         

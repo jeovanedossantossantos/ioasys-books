@@ -17,7 +17,7 @@ export const Home: React.FC = () => {
     const [id, setId] = useState<string>("")
     const {sigin,setSigin} = useContext(AuthContext)
     const push = useNavigate()
-
+    
     const authToke: string | null = localStorage.getItem("@ioasysAuth")
 
 
@@ -60,19 +60,24 @@ export const Home: React.FC = () => {
         setOpen(true)
     }
 
+    
+   
+    
+
     return (
         <>
             <Container>
                 <Header />
-                <Background />
                 <ModalBooks
                     open={open}
                     onClose={() => setOpen(false)}
                     id={id}
                 />
+                <Background />
+                
                 <div style={{
                     display: 'flex', flexWrap: "wrap", justifyContent: 'center',
-                    alignItems: 'center', margin: "auto", position: "absolute"
+                    alignItems: 'center', margin: "auto", position: "relative"
                 }}>
                     {
                         dataBooks.map(e => {

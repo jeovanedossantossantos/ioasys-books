@@ -25,7 +25,7 @@ export const ModalBooks: React.FC<ModalBooksProps> = ({ open, onClose, id }) => 
             const authorization: any = JSON.parse(authToke)
             try {
 
-                const res = await api.get("/books/" + id, {
+                const res = await api.get(`/books/${id}`, {
                     headers: {
 
                         authorization: "Bearer " + authorization.authorization
@@ -35,7 +35,7 @@ export const ModalBooks: React.FC<ModalBooksProps> = ({ open, onClose, id }) => 
 
 
                 setAmount(res.data.authors.length)
-                
+
                 setLoad(false)
 
             } catch (err) {
@@ -46,29 +46,32 @@ export const ModalBooks: React.FC<ModalBooksProps> = ({ open, onClose, id }) => 
 
     useEffect(() => {
         setDataBook({} as DataBooksProps)
-       
-        booksId()
-        setLoad(true)
-       
+        if (id) {
+            booksId()
+            setLoad(true)
+
+        }
+
 
 
 
     }, [id])
     if (load) {
-        return(
-           <ContainerModal>
-               <Modal
-                style={{ margin: "0", marginRight: 20 }}
-                open={open}
-                onClose={() => onClose()}
+        return (
+            <ContainerModal>
+                <Modal
+                    style={{ margin: "0", marginRight: 20 }}
+                    open={open}
+                    onClose={() => onClose()}
 
 
-            >
-                 <Loader/>
-            </Modal>
-              
-           </ContainerModal>
-            
+                >
+                    <Loader />
+                    
+                </Modal>
+
+            </ContainerModal>
+
         )
     }
     return (

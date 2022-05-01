@@ -1,6 +1,6 @@
 import axios from 'axios';
-
+import {API} from "../const/const"
 export const api = axios.create({
-    baseURL:"https://books.ioasys.com.br/api/v1"
+    baseURL: API
     
 })

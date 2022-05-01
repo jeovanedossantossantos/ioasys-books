@@ -107,3 +107,8 @@ Você deverá construir um projeto utilizando o layout proposto
     </p>
 </li>
 </ol>
+# Comando para instalar as dependências
+      yarn
+# Comandos para executar a aplicação
+
+      yarn dev

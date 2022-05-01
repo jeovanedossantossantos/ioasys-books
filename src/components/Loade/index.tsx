@@ -8,6 +8,7 @@ const Loader: React.FC = () => {
         loop: true,
         autoplay: true,
         animationData: animation,
+        
 
     };
     return (

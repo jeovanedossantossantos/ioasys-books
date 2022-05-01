@@ -6,7 +6,6 @@ import ModalBooks from "../../components/Modal"
 import { api } from "../../service/api";
 import { Background, Container, ContainerCard, CurrentPage } from "./styel";
 import { DataBooksProps } from "../../interfeice/BooksIntefeces"
-import ChevronShape from "../../assets/img/chevronshape.png"
 import ChevronShape2 from "../../assets/img/chevronshape2.png"
 import { AuthContext } from "../../hooks/auth";
 
@@ -87,13 +86,7 @@ export const Home: React.FC = () => {
                                 >
                                     <Card
                                         authors={e.authors}
-                                        category={e.category}
-                                        description={e.description}
-                                        id={e.id}
                                         imageUrl={e.imageUrl}
-                                        isbn10={e.isbn10}
-                                        isbn13={e.isbn13}
-                                        language={e.language}
                                         pageCount={e.pageCount}
                                         published={e.published}
                                         publisher={e.publisher}

@@ -19,6 +19,6 @@ export const Nav = styled.nav`
         margin-bottom: 50px;
         padding: 10px;
         /* margin-right: 30px; */
-        background-color:#FFFFFF;
+        background-color:transparent;
     }
 `

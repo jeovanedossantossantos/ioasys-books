@@ -8,7 +8,8 @@ import { AuthContext } from "../../hooks/auth";
 export const Header: React.FC = () => {
     const {sigin,setSigin} = useContext(AuthContext)
     const logOut = ()=>{
-        localStorage.removeItem("@ioasysToken")
+        localStorage.removeItem("@ioasysToke")
+        localStorage.removeItem("@ioasysAuth")
         localStorage.removeItem("@ioasysUser")
         setSigin(false)
 
